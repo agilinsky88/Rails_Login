@@ -1,0 +1,16 @@
+<h1>You are successfully logged in!</h1>
+
+<h3>Here is your information:</h3>
+<p>
+Your username is: <%= session[:username] %>
+</br>
+Your name is: <%= session[:first_name].capitalize %> <%= session[:last_name].capitalize %>
+</br>
+Your address is: <%= session[:street_address] %> <%= session[:city].capitalize %>, <%= session[:state].upcase%> <%= session[:postal_code] %> <%= session[:country].upcase %>
+</br>
+Your email is: <%= session[:email_address] %>
+</p>
+
+<form action="login" method="post">
+    <input type="submit" name="logout" value="Log Out">
+</form>
